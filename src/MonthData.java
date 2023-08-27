@@ -25,16 +25,17 @@ class MonthData {
         return sumSteps;
     }
 
-    int bestSeries(int goalByStepsPerDay) {
+    int bestSeries(int goalByStepsPerDay) { // вот так работает как требуется))
         int currentSeries = 0;
         int finalSeries = 0;
         for (int day : days) {
             if (day >= goalByStepsPerDay) {
                 currentSeries++;
-            } else {
-                if (finalSeries < currentSeries)
+                if (finalSeries < currentSeries) {
                     finalSeries = currentSeries;
-                currentSeries = 0;
+                } else {
+                    currentSeries = 0;
+                }
             }
         } return finalSeries;
     }
