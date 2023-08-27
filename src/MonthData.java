@@ -28,8 +28,8 @@ class MonthData {
     int bestSeries(int goalByStepsPerDay) {
         int currentSeries = 0;
         int finalSeries = 0;
-        for (int steps = 0; steps < days.length; steps++) {
-            if (days[steps] >= goalByStepsPerDay) {
+        for (int day : days) {
+            if (day >= goalByStepsPerDay) {
                 currentSeries++;
             } else {
                 if (finalSeries < currentSeries)

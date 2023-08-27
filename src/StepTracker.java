@@ -20,8 +20,9 @@ class StepTracker {
         int goal = scanner.nextInt();
         if(goal <= 0) {
             System.out.println("Значение больжно быть больше нуля");
-            goalByStepsPerDay = goal;
+            return;
         }
+        goalByStepsPerDay = goal;
     }
 
     public void addNewNumberStepsPerDay() {
